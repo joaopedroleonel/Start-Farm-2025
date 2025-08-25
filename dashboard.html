@@ -22,12 +22,9 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Converting to responsive flexbox layout -->
     <div class="min-h-screen flex">
-        <!-- Mobile sidebar overlay -->
         <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden hidden"></div>
         
-        <!-- Sidebar -->
         <div id="sidebar" class="w-64 bg-white border-r border-gray-200 fixed lg:static inset-y-0 left-0 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out lg:block">
             <div class="p-6 border-b border-gray-200">
                 <div class="flex items-center gap-3">
@@ -89,27 +86,26 @@
             </div>
         </div>
 
-        <!-- Main content area with responsive layout -->
         <div class="flex-1 flex flex-col min-h-screen">
-            <!-- Header -->
-            <header class="bg-white border-b border-gray-100 px-4 lg:px-20 py-4">
-                <div class="flex items-center justify-between">
-                    <!-- Added mobile menu button with ID -->
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-
-                    <div class="flex-1 lg:flex-none">
-                        <h1 class="text-xl lg:text-2xl font-semibold text-gray-800 font-roboto">Monitoramento Ambiental</h1>
-                        <p class="text-sm text-gray-600 font-roboto">Relatório em tempo real - Fevereiro 2024</p>
+            <header class="bg-white border-b border-gray-200 px-4 lg:px-6">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex items-center space-x-4">
+                        <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                        
+                        <div>
+                            <h1 class="text-xl lg:text-2xl font-semibold text-gray-800">Monitoramento Ambiental</h1>
+                            <p class="text-sm text-gray-600">Relatório em tempo real - Fevereiro 2024</p>
+                        </div>
                     </div>
-
-                    <div class="flex items-center space-x-3">
+                    
+                    <div class="flex items-center space-x-4">
                         <div class="hidden sm:flex items-center space-x-2">
                             <div class="w-2 h-2 bg-green-500 rounded-full opacity-65"></div>
-                            <span class="text-sm text-gray-600 font-poppins">Tempo Real</span>
+                            <span class="text-sm text-gray-600">Tempo Real</span>
                         </div>
                         <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
                             <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -120,17 +116,13 @@
                 </div>
             </header>
 
-            <!-- Main content with responsive padding and layout -->
             <main class="flex-1 bg-gray-50 p-4 lg:p-8 space-y-9">
-                <!-- Page Title -->
                 <div class="space-y-2">
                     <h2 class="text-xl lg:text-2xl font-semibold text-gray-900 font-poppins">Monitoramento de Emissões Atmosféricas</h2>
                     <p class="text-sm lg:text-base text-gray-600 font-poppins">Dados da última semana - Atualizado em tempo real</p>
                 </div>
 
-                <!-- Responsive metrics cards grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-                    <!-- CO Card -->
                     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center space-x-3">
@@ -153,7 +145,6 @@
                         </div>
                     </div>
 
-                    <!-- SOx Card -->
                     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center space-x-3">
@@ -176,7 +167,6 @@
                         </div>
                     </div>
 
-                    <!-- NOx Card -->
                     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center space-x-3">
@@ -199,7 +189,6 @@
                         </div>
                     </div>
 
-                    <!-- Material Particulado Card -->
                     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center space-x-3">
@@ -223,7 +212,6 @@
                     </div>
                 </div>
 
-                <!-- Responsive chart section -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 space-y-4 sm:space-y-0">
                         <div>
@@ -232,34 +220,110 @@
                         </div>
                         <div class="flex space-x-1">
                             <button class="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-medium rounded-lg">7 dias</button>
-                            <button class="px-3 py-1 text-gray-500 text-xs font-medium rounded-lg hover:bg-gray-50">30 dias</button>
                         </div>
                     </div>
                     
-                    <!-- Responsive chart container with horizontal scroll on mobile -->
-                    <div class="overflow-x-auto">
-                        <div class="min-w-[800px] h-96 relative">
-                            <!-- Chart implementation would go here -->
-                            <!-- For now, keeping the complex SVG structure but making it responsive -->
-                            <div class="w-full h-full flex items-center justify-center bg-gray-50 rounded-lg">
-                                <div class="text-center">
-                                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3 3V21H21" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M9 9L12 6L16 10L21 5" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </div>
-                                    <p class="text-gray-600 font-medium">Gráfico de Evolução dos Poluentes</p>
-                                    <p class="text-sm text-gray-500 mt-1">Dados dos últimos 7 dias</p>
+                    <div class="w-full h-96 relative">
+                        <svg class="w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid meet">
+                            <rect width="800" height="300" fill="#FAFAFA" rx="8"/>
+                            
+                            <defs>
+                                <pattern id="grid" width="80" height="30" patternUnits="userSpaceOnUse">
+                                    <path d="M 80 0 L 0 0 0 30" fill="none" stroke="#E5E7EB" stroke-width="1"/>
+                                </pattern>
+                            </defs>
+                            <rect width="800" height="300" fill="url(#grid)" />
+                            
+                            <g transform="translate(60, 20)">
+                                <g class="y-axis">
+                                    <text x="-10" y="25" text-anchor="end" class="text-xs fill-gray-500" font-family="Roboto">50</text>
+                                    <text x="-10" y="75" text-anchor="end" class="text-xs fill-gray-500" font-family="Roboto">40</text>
+                                    <text x="-10" y="125" text-anchor="end" class="text-xs fill-gray-500" font-family="Roboto">30</text>
+                                    <text x="-10" y="175" text-anchor="end" class="text-xs fill-gray-500" font-family="Roboto">20</text>
+                                    <text x="-10" y="225" text-anchor="end" class="text-xs fill-gray-500" font-family="Roboto">10</text>
+                                    <text x="-10" y="260" text-anchor="end" class="text-xs fill-gray-500" font-family="Roboto">0</text>
+                                </g>
+                                
+                                <g class="x-axis" transform="translate(0, 270)">
+                                    <text x="50" y="15" text-anchor="middle" class="text-xs fill-gray-500" font-family="Roboto">Seg</text>
+                                    <text x="150" y="15" text-anchor="middle" class="text-xs fill-gray-500" font-family="Roboto">Ter</text>
+                                    <text x="250" y="15" text-anchor="middle" class="text-xs fill-gray-500" font-family="Roboto">Qua</text>
+                                    <text x="350" y="15" text-anchor="middle" class="text-xs fill-gray-500" font-family="Roboto">Qui</text>
+                                    <text x="450" y="15" text-anchor="middle" class="text-xs fill-gray-500" font-family="Roboto">Sex</text>
+                                    <text x="550" y="15" text-anchor="middle" class="text-xs fill-gray-500" font-family="Roboto">Sáb</text>
+                                    <text x="650" y="15" text-anchor="middle" class="text-xs fill-gray-500" font-family="Roboto">Dom</text>
+                                </g>
+                                
+                                <path d="M 50 200 L 150 180 L 250 190 L 350 170 L 450 185 L 550 175 L 650 195" 
+                                      fill="none" stroke="#3B82F6" stroke-width="3" stroke-linecap="round"/>
+
+                                <path d="M 50 120 L 150 100 L 250 110 L 350 90 L 450 105 L 550 95 L 650 115" 
+                                      fill="none" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+                                
+                                <path d="M 50 140 L 150 130 L 250 135 L 350 125 L 450 140 L 550 130 L 650 145" 
+                                      fill="none" stroke="#EA580C" stroke-width="3" stroke-linecap="round"/>
+                                
+                                <path d="M 50 160 L 150 150 L 250 155 L 350 145 L 450 160 L 550 150 L 650 165" 
+                                      fill="none" stroke="#9333EA" stroke-width="3" stroke-linecap="round"/>
+
+                                <circle cx="50" cy="200" r="4" fill="#3B82F6"/>
+                                <circle cx="150" cy="180" r="4" fill="#3B82F6"/>
+                                <circle cx="250" cy="190" r="4" fill="#3B82F6"/>
+                                <circle cx="350" cy="170" r="4" fill="#3B82F6"/>
+                                <circle cx="450" cy="185" r="4" fill="#3B82F6"/>
+                                <circle cx="550" cy="175" r="4" fill="#3B82F6"/>
+                                <circle cx="650" cy="195" r="4" fill="#3B82F6"/>
+
+                                <circle cx="50" cy="120" r="4" fill="#F59E0B"/>
+                                <circle cx="150" cy="100" r="4" fill="#F59E0B"/>
+                                <circle cx="250" cy="110" r="4" fill="#F59E0B"/>
+                                <circle cx="350" cy="90" r="4" fill="#F59E0B"/>
+                                <circle cx="450" cy="105" r="4" fill="#F59E0B"/>
+                                <circle cx="550" cy="95" r="4" fill="#F59E0B"/>
+                                <circle cx="650" cy="115" r="4" fill="#F59E0B"/>
+
+                                <circle cx="50" cy="140" r="4" fill="#EA580C"/>
+                                <circle cx="150" cy="130" r="4" fill="#EA580C"/>
+                                <circle cx="250" cy="135" r="4" fill="#EA580C"/>
+                                <circle cx="350" cy="125" r="4" fill="#EA580C"/>
+                                <circle cx="450" cy="140" r="4" fill="#EA580C"/>
+                                <circle cx="550" cy="130" r="4" fill="#EA580C"/>
+                                <circle cx="650" cy="145" r="4" fill="#EA580C"/>
+
+                                <circle cx="50" cy="160" r="4" fill="#9333EA"/>
+                                <circle cx="150" cy="150" r="4" fill="#9333EA"/>
+                                <circle cx="250" cy="155" r="4" fill="#9333EA"/>
+                                <circle cx="350" cy="145" r="4" fill="#9333EA"/>
+                                <circle cx="450" cy="160" r="4" fill="#9333EA"/>
+                                <circle cx="550" cy="150" r="4" fill="#9333EA"/>
+                                <circle cx="650" cy="165" r="4" fill="#9333EA"/>
+                            </g>
+                        </svg>
+                        
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-90 rounded-lg p-3 shadow-sm">
+                            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                    <span class="text-gray-700 font-medium">CO</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                    <span class="text-gray-700 font-medium">SOx</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+                                    <span class="text-gray-700 font-medium">NOx</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                                    <span class="text-gray-700 font-medium">MP</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Responsive bottom section with two columns -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <!-- Status dos Limites -->
                     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                         <h3 class="text-lg font-semibold text-gray-900 font-poppins mb-6">Status dos Limites</h3>
                         <div class="space-y-4">
@@ -294,7 +358,6 @@
                         </div>
                     </div>
 
-                    <!-- Alertas Recentes -->
                     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                         <h3 class="text-lg font-semibold text-gray-900 font-poppins mb-6">Alertas Recentes</h3>
                         <div class="space-y-3">
@@ -338,9 +401,7 @@
         </div>
     </div>
 
-    <!-- Added JavaScript for mobile menu functionality -->
     <script>
-        // Mobile menu functionality
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const sidebar = document.getElementById('sidebar');
         const sidebarOverlay = document.getElementById('sidebar-overlay');
@@ -357,18 +418,15 @@
 
         mobileMenuButton.addEventListener('click', toggleSidebar);
         sidebarOverlay.addEventListener('click', closeSidebar);
-
-        // Close sidebar when clicking on a link (mobile)
         const sidebarLinks = sidebar.querySelectorAll('a');
         sidebarLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth < 1024) { // lg breakpoint
+                if (window.innerWidth < 1024) {
                     closeSidebar();
                 }
             });
         });
 
-        // Close sidebar on window resize if desktop
         window.addEventListener('resize', () => {
             if (window.innerWidth >= 1024) {
                 closeSidebar();
