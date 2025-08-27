@@ -1,0 +1,6 @@
+STATUS,DATA/HORA,POLUENTE,VALOR MEDIDO,LIMITE LEGAL,UNIDADE,CONFORMIDADE
+Online,14/02/2025 08:30,CO,0.7 ppm,1 ppm,Unidade A,Sim
+Manutenção,14/02/2025 09:00,NO₂,42 µg/m³,100 µg/m³,Unidade B,Não
+Online,14/02/2025 09:30,SO₂,15 µg/m³,80 µg/m³,Unidade C,Sim
+Offlline,14/02/2025 10:00,PM2.5,25 µg/m³,25 µg/m³,Unidade B,Não
+Online,14/02/2025 10:30,CO,0.9 ppm,1 ppm,Unidade A,Sim
