@@ -77,7 +77,7 @@ export function Sensores() {
             target="_blank"
             className="w-12 h-12 lg:w-auto lg:h-auto lg:px-4 lg:py-2 bg-white rounded-lg border border-gray-300 flex items-center justify-center gap-2 hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
           >
-            <span className="hidden lg:inline text-sm">
+            <span className="inline text-sm">
               <Download />
             </span>
           </a>
