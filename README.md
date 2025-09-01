@@ -45,6 +45,9 @@ flowchart LR
 * **Comunicação:** LoRa de longo alcance
 * **Alimentação:** Bateria
 
+![Protótipo Hardware](public/prototipo-pcb.png)
+_Protótipo do equipamento desenvolvido para monitoramento de carbono atmosférico e ilustração conceitual da implementação dos dispositivos em ambiente industrial._
+
 ---
 
 ## Dashboard Web
