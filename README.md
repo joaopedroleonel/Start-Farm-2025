@@ -95,7 +95,7 @@ Você pode acessar a prévia do dashboard aqui: [**Clique aqui para abrir**](htt
 
 Este projeto foi desenvolvido durante o **Start Farm 2025**, resultando no **1º lugar** da competição.
 
-* [Igor Cauan]()
+* [Igor Cauan](https://github.com/TTVTheAgregado)
 * [João Gustavo](https://github.com/joaosilva-web)
 * [João Moreira](https://github.com/KingDasWinx)
 * [João Pedro](https://github.com/joaopedroleonel)
